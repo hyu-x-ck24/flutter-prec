@@ -1,3 +1,4 @@
+import 'package:carrot_flutter/src/screens/home.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/intro.dart';
@@ -11,11 +12,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Carrot Market',
-      initialRoute: '/',
       routes: {
-        '/': (context) => const Intro(),
+        '/': (context) => const Home(),
+        '/intro': (context) => const Intro(),
         '/register': (context) => const Register(),
       },
+      initialRoute: '/',
     );
   }
 }
+

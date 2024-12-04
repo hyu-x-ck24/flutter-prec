@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Intro extends StatelessWidget {
-  const Intro({super.key});
+class UnknownScreen extends StatelessWidget {
+  const UnknownScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,20 +10,17 @@ class Intro extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '이 책은 플러터로 \nSNS 중고 거래 애플리케이션을 만듭니다.',
-              textAlign: TextAlign.center,
-            ),
+            const Text('존재하지 않는 페이지입니다.'),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/feed/1');
+                Navigator.pop(context);
               },
-              child: const Text('텀블러 사러 가기'),
+              child: const Text('이전 페이지로 가기'),
             ),
           ],
         ),
-      ),
+      )
     );
   }
 }

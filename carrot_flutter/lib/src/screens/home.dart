@@ -47,9 +47,12 @@ class _HomeState extends State<Home> {
               showModalBottomSheet(
                 context: context,
                 builder: (context) {
-                  return MoreBottomModal(cancelTap: () {
-                    Navigator.pop(context);
-                  });
+                  return MoreBottomModal(
+                    cancelTap: () {
+                      Navigator.pop(context);
+                    },
+                    hideTap: () {},
+                  );
                 },
               );
             },

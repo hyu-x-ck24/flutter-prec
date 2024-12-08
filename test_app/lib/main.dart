@@ -9,18 +9,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int _selectedIndex = 0;
+    int selectedIndex = 0;
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
           child: IndexedStack(
-            index: _selectedIndex,
+            index: selectedIndex,
             children: <Widget>[
               Container(
                 width: 200,
                 height: 100,
-                padding: EdgeInsets.all(8.0),
-                margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
+                padding: const EdgeInsets.all(8.0),
+                margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
                 decoration: BoxDecoration(
                     color: Colors.blue,
                     border: Border.all(color: Colors.black, width: 3),
@@ -29,11 +29,11 @@ class MyApp extends StatelessWidget {
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.5),
                         spreadRadius: 6,
-                        offset: Offset(1, 5),
+                        offset: const Offset(1, 5),
                         blurRadius: 10,
                       )
                     ]),
-                child: Text('Hello World',
+                child: const Text('Hello World',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 25,
